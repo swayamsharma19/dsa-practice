@@ -10,8 +10,8 @@ public:
     int noPages(vector<int> &arr, int pages)
     {
         int n = arr.size();
-        int sum = 0;
-        int student = 1;
+        int sum = 0;   // 👉 ye current student ke total pages track karta hai
+        int student = 1;  
 
         for (int i = 0; i < n; i++)
         {
