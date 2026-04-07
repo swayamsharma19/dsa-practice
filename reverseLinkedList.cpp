@@ -1,0 +1,19 @@
+#include<iostream>
+using namespace std;
+
+class Solution {
+public:
+    ListNode* reverseList(ListNode* head) {
+        ListNode* prev = NULL;
+        ListNode* curr = head;
+        
+        while (curr != NULL) {
+            ListNode* nextNode = curr->next; // store next
+            curr->next = prev;               // reverse link
+            prev = curr;                     // move prev
+            curr = nextNode;                 // move curr
+        }
+        
+        return prev;
+    }
+};
